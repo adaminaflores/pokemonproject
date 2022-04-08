@@ -3,6 +3,7 @@ import PokemonList from './PokemonList';
 import Pagination from './Pagination';
 import axios from 'axios';
 
+
 function App() {
   const [pokemon, setPokemon] = useState(["bulbasaur", "charmander"])
   const[currentPageUrl, setCurrentPageUrl] = useState("https://pokeapi.co/api/v2/pokemon")
@@ -38,11 +39,13 @@ function App() {
 
   return (
   <>
+  <div className='App'>
     <PokemonList pokemon= {pokemon} />
     <Pagination 
       gotoNextPage={nextPageUrl ? gotoNextPage : null}
       gotoPrevPage={prevPageUrl ? gotoPrevPage : null}
     />
+  </div>
  </>
   );
 }
