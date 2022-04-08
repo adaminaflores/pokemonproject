@@ -1,12 +1,13 @@
 import React from "react";
+import './styles/PokemonList.css';
 
 export default function PokemonList({ pokemon }){
     return(
-    <div>
+    <section className="poke-list">
         {pokemon.map(p => (
             <div key={p}>{p}</div>
         ))}
 
-    </div>
+    </section>
     )
 }
